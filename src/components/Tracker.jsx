@@ -6,12 +6,13 @@ export default function Tracker({ intake, goal, setIntake }) {
         <Box height={400} width="100%" alignItems="center" justifyContent="cente" >
             <View
 
-                onTouchStart={e => this.touchY = e.nativeEvent.pageY} >
+                onTouchStart={e => this.touchY = e.nativeEvent.pageY}
 
-                onTouchEnd = {e => {
-                    const swipeY = Mathc.rouund(this.touchY - e.nativeEvent.pageY)
+                onTouchEnd={e => {
+                    const swipeY = Math.round(this.touchY - e.nativeEvent.pageY)
                     if (swipeY > 20 || swipeY < -20) setIntake(intake + 5 * swipeY)
                 }}
+            >
                 <Image
                     size={200}
                     borderRadius={100}

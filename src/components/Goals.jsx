@@ -7,7 +7,7 @@ export default function Goals({ goal, setGoal }) {
                 <ArrowUpIcon color="blue.100" onPress={() => setGoal(goal + 500)} />
                 <InfoIcon color="blue.300" mr={2} />
                 Water target: {goal} ml
-                <ArrowUpIcon color="blue.100" onPress={() => setGoal(goal + 500)} />
+                <ArrowDownIcon color="blue.100" onPress={() => setGoal(goal + 500)} />
             </Text>
         </Box>
     )
